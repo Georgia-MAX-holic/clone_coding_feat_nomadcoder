@@ -1,0 +1,105 @@
+        @import "reset";
+        @import "_variables";
+        body {
+            height: 100vh;
+            background-color: $white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        header {
+            background-color: #faebd7;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 33%;
+            height: 100%;
+            padding: 190px;
+            padding: 10vh 0 72px 72px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: $red;
+            h1 {
+                text-transform: uppercase; // 전부 대문자로 변경 
+                font-size: 85px;
+                width: 50%;
+                letter-spacing: 5px; //글자간격
+            }
+            h3 {
+                //색  _variables.scss 에서 만든 색
+                font-size: 30px; //폰트 사이즈
+                font-weight: 400; //굵기
+                margin-bottom: 20px //주변 과의 공간만들기
+            }
+            p,
+            h3 {
+                line-height: 1.2;
+                width: 70%;
+                text-align: center;
+            }
+            p {
+                font-size: 22px;
+                font-weight: 300;
+                margin-bottom: 40px;
+            }
+            nav {
+                width: 80;
+                ul {
+                    height: 100%;
+                    align-content: space-between;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        cursor: pointer; //마우스 올라갔을때 어떤 모습일지
+                        margin-left: 10px;
+                        font-size: 15px;
+                        color: black;
+                        opacity: 0.5; //연하게
+                        border-bottom: 1px solid black; //밑줄
+                        &:hover {
+                            opacity: 1; // 마우스 올라가면 굵기 1로
+                        }
+                    }
+                }
+            }
+        }
+        
+        main {
+            height: 5000vh;
+            background: linear-gradient( to bottom, rgba(0, 0, 0, 0.1) 5%, transparent, transparent, transparent, transparent) $red;
+            margin-left: $fixedWidth;
+            .movie {
+                height: 100vh;
+                display: flex;
+                flex-direction: column; //콜롬 방향
+                justify-content: center; //사진 컨텐츠 정중앙
+                align-items: center;
+                color: white
+            } //클래스 표현은 .movie
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                .movie_header {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between; // justify 할때 범위 같이
+                    margin-bottom: 25px;
+                    align-items: flex-end;
+                    h4 {
+                        font-size: 32px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+                    h5 {
+                        letter-spacing: 2px; //글자 간 간격
+                    }
+                }
+            }
+            img {
+                width: 100%
+            }
+        }
